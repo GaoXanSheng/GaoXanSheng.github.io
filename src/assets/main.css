@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-bg: var(--t-bg);
+  --color-surface: var(--t-surface);
+  --color-elevated: var(--t-elevated);
+  --color-text: var(--t-text);
+  --color-muted: var(--t-muted);
+  --color-accent: var(--t-accent);
+  --color-accent-fg: var(--t-accent-fg);
+  --color-line: var(--t-line);
+  --radius-card: var(--t-radius);
+  --font-display: var(--t-font-display);
+  --font-body: var(--t-font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--t-bg);
+  color: var(--t-text);
+  font-family: var(--t-font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+.theme-surface {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+html[data-theme='terminal'] .section-title::before {
+  content: '$ ';
+  color: var(--t-accent);
+}
+
+.orb {
+  display: none;
+}
+
+html[data-theme='glass'] .orb {
+  position: fixed;
+  z-index: 0;
+  display: block;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+html[data-theme='glass'] .orb-a {
+  top: 10%;
+  left: -4rem;
+  width: 18rem;
+  height: 18rem;
+  background: #ffb7c5;
+}
+
+html[data-theme='glass'] .orb-b {
+  right: -5rem;
+  bottom: 6%;
+  width: 22rem;
+  height: 22rem;
+  background: #8ee4e6;
+}
+
+html[data-theme='glass'] .theme-surface {
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(43, 58, 103, 0.08);
+}
+

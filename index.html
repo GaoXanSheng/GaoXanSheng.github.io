@@ -1,15 +1,29 @@
 <!doctype html>
-<html lang="zh_cn"  class="mdui-theme-auto">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>云某人的小站</title>
-    <meta name="keywords" content="云某人, 小站, 博客, blog" />
-    <script type="module" crossorigin src="/assets/index-36c504f9.js"></script>
-    <link rel="stylesheet" href="/assets/index-5d1abf14.css">
+    <meta name="keywords" content="云某人, 小站, 博客, blog, GaoXanSheng" />
+    <meta
+      name="description"
+      content="GaoXanSheng（云某人）的小站：笔记本固件、Minecraft 生态、程序化生成与浏览器内嵌，能拆的都拆一遍。"
+    />
+    <style>
+      html {
+        background: #f4f5f5;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #0f1115;
+          color-scheme: dark;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
-    
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
