@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import SiteHeader from '@/components/SiteHeader.vue'
 import HeroSection from '@/components/HeroSection.vue'
 import SiteEpigraph from '@/components/SiteEpigraph.vue'
-import ReflectionSection from '@/components/ReflectionSection.vue'
 import ProjectsSection from '@/components/ProjectsSection.vue'
 import OldSiteSection from '@/components/OldSiteSection.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
@@ -22,7 +21,6 @@ const themePanelOpen = ref(false)
   <main class="relative z-10">
     <HeroSection />
     <SiteEpigraph />
-    <ReflectionSection />
     <ProjectsSection />
     <OldSiteSection />
   </main>
